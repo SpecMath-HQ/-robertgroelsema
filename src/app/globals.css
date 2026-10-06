@@ -1,0 +1,120 @@
+@import "tailwindcss";
+
+@theme {
+  /* Color roles (see CLAUDE.md section 4) */
+  --color-ink: #000000;
+  --color-paper: #FFFFFF;
+  --color-signal: #FE4300;
+  --color-signal-text: #C23400;
+  --color-field: #F0F0F0;
+  --color-rule: #D7DCDD;
+  --color-muted: #5C5C5C;
+
+  /* Temporary aliases so un-migrated components keep rendering.
+     Remove each one as the sections are rebuilt in Phase 3. */
+  --color-primary: var(--color-signal);
+  --color-secondary: var(--color-muted);
+  --color-softGray: var(--color-field);
+  --color-mistGray: var(--color-rule);
+  --color-gray: var(--color-rule);
+
+  --breakpoint-xs: 425px;
+
+  /* Typefaces */
+  --font-sans: var(--font-public-sans), "Helvetica Neue", Arial, sans-serif;
+  --font-serif: var(--font-source-serif), Georgia, "Times New Roman", serif;
+
+  /* Type scale (see CLAUDE.md section 5) */
+  --text-display: clamp(3rem, 7.5vw, 7rem);
+  --text-display--line-height: 0.95;
+  --text-display--letter-spacing: -0.025em;
+  --text-display--font-weight: 800;
+
+  --text-h2: clamp(2rem, 3.5vw, 3.25rem);
+  --text-h2--line-height: 1;
+  --text-h2--letter-spacing: -0.015em;
+  --text-h2--font-weight: 800;
+
+  --text-h3: clamp(1.25rem, 1.8vw, 1.625rem);
+  --text-h3--line-height: 1.15;
+  --text-h3--letter-spacing: -0.005em;
+  --text-h3--font-weight: 700;
+
+  --text-lead: clamp(1.25rem, 1.7vw, 1.5rem);
+  --text-lead--line-height: 1.45;
+
+  --text-body: 1.125rem;
+  --text-body--line-height: 1.65;
+
+  --text-small: 0.9375rem;
+  --text-small--line-height: 1.45;
+
+  --text-label: 0.875rem;
+  --text-label--line-height: 1.3;
+  --text-label--letter-spacing: 0.01em;
+  --text-label--font-weight: 600;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  html {
+    scroll-behavior: smooth;
+  }
+}
+
+@layer utilities {
+  .container {
+    @apply w-full max-w-[80rem] mx-auto mt-0 mb-0 py-0 sm:px-7 px-5;
+  }
+  .label {
+    @apply font-sans text-label text-ink;
+  }
+  .input {
+    @apply w-full border-0 border-b border-ink bg-transparent py-2 font-serif text-body text-ink;
+  }
+}
+
+@layer base {
+  body {
+    @apply m-0 bg-paper font-serif text-body text-ink;
+  }
+
+  h1 {
+    @apply font-sans text-display;
+  }
+
+  h2 {
+    @apply font-sans text-h2;
+  }
+
+  h3 {
+    @apply font-sans text-h3;
+  }
+
+  h4,
+  h5,
+  h6 {
+    @apply font-sans;
+  }
+
+  :focus-visible {
+    outline: 3px solid var(--color-signal-text);
+    outline-offset: 3px;
+  }
+}
+
+@media print {
+  body {
+    background: white !important;
+    color: black !important;
+  }
+
+  header,
+  footer,
+  .no-print {
+    display: none !important;
+  }
+
+  * {
+    background: transparent !important;
+  }
+}
