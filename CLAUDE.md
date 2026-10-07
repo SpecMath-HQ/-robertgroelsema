@@ -149,7 +149,7 @@ Home page order: hero, About Robert, Career, Consulting and other experience, Se
 
 ## 10a. Favicon
 
-- The site icon is an "RG" monogram drawn in code, not an image file: white Barlow Condensed ExtraBold on `--color-ocean`, in a square (`src/app/monogram.tsx`, used by `src/app/icon.tsx` for 32px and 512px tab icons and `src/app/apple-icon.tsx` for the 180px iPhone icon). The font file is `src/app/fonts/BarlowCondensed-ExtraBold.ttf` (SIL Open Font License, `OFL.txt` alongside). Icons are generated once at build time. Do not add a `favicon.ico`; the template's was removed.
+- The site icon is an "RG" monogram drawn in code, not an image file: white Barlow Condensed ExtraBold on `--color-ocean`, in a square (`src/app/monogram.tsx`, used by `src/app/icon.tsx` for a single 512px tab icon and `src/app/apple-icon.tsx` for the 180px iPhone icon). **Never use `generateImageMetadata` for the icons**: it made Vercel render them per request, where the font file is not available, and the tab icon failed with a 500 error (the browser showed a globe). The font file is `src/app/fonts/BarlowCondensed-ExtraBold.ttf` (SIL Open Font License, `OFL.txt` alongside). Icons are generated once at build time. Do not add a `favicon.ico`; the template's was removed.
 
 ## 11. Deployment
 
