@@ -147,6 +147,10 @@ Home page order: hero, About Robert, Career, Consulting and other experience, Se
 - Placeholder until real photos arrive: a `--color-field` rectangle at the correct ratio, hidden from assistive technology.
 - Delete the template's sample images in `public/images/` once nothing uses them.
 
+## 10a. Favicon
+
+- The site icon is an "RG" monogram drawn in code, not an image file: white Barlow Condensed ExtraBold on `--color-ocean`, in a square (`src/app/monogram.tsx`, used by `src/app/icon.tsx` for 32px and 512px tab icons and `src/app/apple-icon.tsx` for the 180px iPhone icon). The font file is `src/app/fonts/BarlowCondensed-ExtraBold.ttf` (SIL Open Font License, `OFL.txt` alongside). Icons are generated once at build time. Do not add a `favicon.ico`; the template's was removed.
+
 ## 11. Deployment
 
 - `next.config.ts` is empty on purpose (no basePath, no static export, image optimization on).
