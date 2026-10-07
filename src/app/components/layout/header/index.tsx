@@ -10,7 +10,7 @@ const Header = () => {
     { href: "/#about", label: "About Robert" },
     { href: "/#career", label: "Career" },
     { href: "/#work", label: "Selected work" },
-    { href: "/#publications", label: "Publications" },
+    { href: "/#publications", label: "Publications and Reports" },
     ...(getPosts().length > 0 ? [{ href: "/insights", label: "Insights" }] : []),
     { href: "/#contact", label: "Contact" },
   ];

@@ -7,7 +7,7 @@ const siteLinks = [
   { href: "/#about", label: "About Robert" },
   { href: "/#career", label: "Career" },
   { href: "/#work", label: "Selected work" },
-  { href: "/#publications", label: "Publications" },
+  { href: "/#publications", label: "Publications and Reports" },
   { href: "/#contact", label: "Contact" },
 ];
 
