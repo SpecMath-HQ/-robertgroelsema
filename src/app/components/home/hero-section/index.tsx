@@ -1,53 +1,32 @@
-import { getImgPath } from "@/utils/image";
-import Image from "next/image";
+import pageData from "@/data/page-data.json";
+import Photo from "../../shared/photo";
+import ContactBar from "./contact-bar";
 
-const index = () => {
+const { profile } = pageData;
+
+const HeroSection = () => {
   return (
-    <section className="relative hero-section overflow-hidden pt-35 md:pt-40 pb-12 lg:pb-30 xl:pt-52">
-      <div className="container">
-        <div className="lg:flex grid grid-cols-1 sm:grid-cols-2 gap-7 md:gap-4 items-center">
-          <div className="flex flex-col gap-4 md:gap-7 max-w-2xl">
-            <div>
-              <div className="flex items-center gap-8">
-                <h1>I'm Sruthi</h1>
-                <div className="wave">
-                  <Image
-                    src={getImgPath("/images/home/banner/wave-icon.svg")}
-                    alt="wave-icon"
-                    width={62}
-                    height={62}
-                    className=""
-                  />
-                </div>
-              </div>
-              <h1>UI/UX Designer</h1>
-            </div>
-            <p className="text-secondary font-normal max-w-md xl:max-w-xl">
-              Lorem Ipsum is simply dummy text of the printing and typesetting
-              industry. variations of passages of Lorem Ipsum available, but the
-              majority have suffered alteration
-            </p>
-          </div>
-          <Image
-            src={getImgPath("/images/home/banner/banner-img.png")}
-            alt="banner-img"
-            width={685}
-            height={650}
-            className="block lg:hidden"
+    <section aria-labelledby="name" className="container pt-12 pb-24 lg:pt-16 lg:pb-32">
+      <div className="grid grid-cols-1 gap-x-8 gap-y-12 lg:grid-cols-12">
+        <div className="lg:col-span-7">
+          <h1 id="name" className="m-0">
+            {profile.name}
+          </h1>
+          <p className="mt-8 mb-0 max-w-[46rem] text-lead font-semibold">{profile.title}</p>
+          <p className="mt-2 mb-0 max-w-[46rem] text-lead">{profile.statement}</p>
+          <ContactBar />
+        </div>
+        <div className="max-w-[24rem] lg:col-span-5 lg:col-start-8 lg:max-w-none">
+          <Photo
+            alt={`Portrait of ${profile.name}`}
+            ratio="portrait"
+            sizes="(min-width: 1024px) 40vw, 24rem"
+            priority
           />
         </div>
-      </div>
-      <div className="absolute right-0 top-0 hidden h-auto w-1/2 lg:block 2xl:h-171.5 2xl:w-187.5">
-        <Image
-          src={getImgPath("/images/home/banner/banner-img.png")}
-          alt="banner-img"
-          width={685}
-          height={650}
-          className=" absolute right-0 top-0 z-1"
-        />
       </div>
     </section>
   );
 };
 
-export default index;
+export default HeroSection;

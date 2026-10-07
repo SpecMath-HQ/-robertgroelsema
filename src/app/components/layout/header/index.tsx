@@ -1,34 +1,43 @@
-"use client";
+import pageData from "@/data/page-data.json";
+import { getPosts } from "@/lib/insights";
+import Link from "next/link";
 
-import Logo from "../logo";
+const { profile } = pageData;
 
 const Header = () => {
-    const handleDownloadPDF = () => {
-        window.print();
-    };
-    return (
-        <header className="navbar top-0 left-0 z-999 w-full absolute">
-            <div className="container">
-                <nav className="py-7">
-                    <div className="flex items-center gap-4 sm:gap-8">
-                        <div>
-                            <Logo />
-                        </div>
+  // Insights appears in the navigation once a post is published.
+  const links = [
+    { href: "/#about", label: "About Robert" },
+    { href: "/#career", label: "Career" },
+    { href: "/#work", label: "Selected work" },
+    { href: "/#publications", label: "Publications" },
+    ...(getPosts().length > 0 ? [{ href: "/insights", label: "Insights" }] : []),
+    { href: "/#contact", label: "Contact" },
+  ];
 
-                    
-                        <button
-                            onClick={handleDownloadPDF}
-                            className="relative overflow-hidden cursor-pointer w-fit py-2 sm:py-3 md:py-5 px-4 sm:px-5 md:px-7 border border-primary rounded-full group"
-                        >
-                            <span className="relative z-10 text-xl font-medium text-black group-hover:text-white transition-colors duration-300">
-                                Download PDF Resume
-                            </span>
-                        </button>
-                    </div>
-                </nav>
-            </div>
-        </header>
-    );
+  return (
+    <header className="container">
+      <div className="flex flex-wrap items-baseline justify-between gap-x-8 gap-y-4 py-6">
+        <Link href="/" className="font-display text-h3 text-ink no-underline">
+          {profile.name}
+        </Link>
+        <nav aria-label="Main">
+          <ul className="m-0 flex list-none flex-wrap gap-x-6 gap-y-2 p-0">
+            {links.map((link) => (
+              <li key={link.href}>
+                <Link
+                  href={link.href}
+                  className="font-display text-link text-ink no-underline hover:text-ocean hover:underline"
+                >
+                  {link.label}
+                </Link>
+              </li>
+            ))}
+          </ul>
+        </nav>
+      </div>
+    </header>
+  );
 };
 
 export default Header;

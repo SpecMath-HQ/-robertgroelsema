@@ -1,40 +1,58 @@
 {
-  "workData": [
+  "work": [
     {
-      "image": "/images/work/work-img-1.jpg",
-      "title": "Mug Sticker Designing",
-      "client": "John Honnai",
-      "slug": "mug-sticker-designing"
+      "title": "Resilience and Economic Growth in the Arid Lands (REGAL-IR)",
+      "client": "USAID/Kenya",
+      "country": "Northern Kenya",
+      "years": "2012–2014",
+      "role": "Chief of Party, Adeso",
+      "summary": "A $45.5m five-year project to raise living standards and food security for drought-affected pastoralists in northern Kenya.",
+      "image": "/images/work/regal-ir-kenya.png",
+      "imageWidth": 1024,
+      "imageHeight": 1536,
+      "imageAlt": "Illustration: a pastoralist woman checks the flow at a solar-powered water point in northern Kenya as herders bring camels and goats to drink.",
+      "crop": "4 / 5",
+      "focus": "50% 85%"
     },
     {
-      "image": "/images/work/work-img-2.jpg",
-      "title": "Mobile App Design",
-      "client": "John Honnai",
-      "slug": "mobile-app-design"
+      "title": "Early Warning and Response Design Support (EWARDS)",
+      "client": "USAID/West Africa",
+      "country": "West Africa",
+      "years": "2009–2011",
+      "role": "Chief of Party, Tetra Tech ARD",
+      "summary": "A $4.5m conflict early warning and response project for West Africa.",
+      "image": "/images/work/conflict-early-warning-west-africa.png",
+      "imageWidth": 1254,
+      "imageHeight": 1254,
+      "imageAlt": "Illustration: a community early-warning monitor in a reflective vest stands on a wall in a West African market town and addresses residents through a megaphone, with a radio mast behind.",
+      "crop": "16 / 9",
+      "focus": "50% 36%"
     },
     {
-      "image": "/images/work/work-img-3.jpg",
-      "title": "Fashion Website Template",
-      "client": "John Honnai",
-      "slug": "fashion-website-template"
+      "title": "Civil Society Media Leadership evaluation",
+      "client": "USAID/Liberia",
+      "country": "Liberia",
+      "years": "2012",
+      "role": "Team Leader",
+      "summary": "Mid-term evaluation of an $11.9m program building civil society and community radio across seven counties.",
+      "image": "/images/work/community-radio-voices-liberia.png",
+      "imageWidth": 1536,
+      "imageHeight": 1024,
+      "imageAlt": "Illustration: blue watercolor silhouettes of Liberian women and men in profile, led by a radio host at a microphone, with faint radio waves spreading outward."
     },
     {
-      "image": "/images/work/work-img-4.jpg",
-      "title": "Book Cover Design",
-      "client": "John Honnai",
-      "slug": "book-cover-design"
-    },
-    {
-      "image": "/images/work/work-img-5.jpg",
-      "title": "Mobile App Design",
-      "client": "John Honnai",
-      "slug": "mobile-app-design"
-    },
-    {
-      "image": "/images/work/work-img-6.jpg",
-      "title": "Mug Sticker Designing",
-      "client": "John Honnai",
-      "slug": "mug-sticker-designing"
+      "title": "Protecting Communities from Violence evaluation",
+      "client": "US State Department",
+      "country": "Eastern DRC",
+      "years": "2012",
+      "role": "Team Leader",
+      "summary": "Final evaluation of 40 community protection committees linked by HF radio to UN field bases.",
+      "image": "/images/work/community-protection-hf-radio-lake-kivu-drc.png",
+      "imageWidth": 1024,
+      "imageHeight": 1536,
+      "imageAlt": "Illustration: a high-frequency radio and an open logbook on a veranda above the terraced hills of South Kivu and Lake Kivu, where a community protection committee member keeps watch.",
+      "crop": "4 / 5",
+      "focus": "50% 80%"
     }
   ]
 }
